@@ -33,10 +33,7 @@ on:
 jobs:
   run_tests:
     name: Run tests
-    if: ${{
-      github.event_name == 'workflow_dispatch' && inputs.run_tests ||
-      github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'tests:') || contains(github.event.head_commit.message, 'run tests'))
-      }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_tests || github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip tests') }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
@@ -61,10 +58,7 @@ jobs:
         node: [22]
         mongo: [7]
     name: Additional tests
-    if: ${{
-      github.event_name == 'workflow_dispatch' && inputs.run_additional_tests ||
-      github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'additional tests') || contains(github.event.head_commit.message, 'additional tests'))
-      }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_additional_tests || github.event_name == 'push' && contains(github.event.head_commit.message, 'additional tests') }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
@@ -84,10 +78,10 @@ jobs:
 
   build_e2e_tests:
     name: Build e2e tests
-    if: ${{
-      github.event_name == 'workflow_dispatch' && inputs.build_e2e_tests ||
-      github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'e2e:') || contains(github.event.head_commit.message, 'build e2e'))
-      }}
+    if: ${{ 
+        github.event_name == 'workflow_dispatch' && inputs.build_e2e_tests || 
+        github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip e2e tests') 
+        }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
