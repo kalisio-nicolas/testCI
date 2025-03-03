@@ -14,7 +14,7 @@ on:
         required: false
         type: boolean
       build_e2e_tests:
-        description: "Build e2e tests"
+        description: "Build end-to-end tests"
         default: false
         required: false
         type: boolean
