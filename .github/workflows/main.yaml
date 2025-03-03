@@ -33,7 +33,10 @@ on:
 jobs:
   run_tests:
     name: Run tests
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_tests || github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip tests') }}
+    if: ${{
+      github.event_name == 'workflow_dispatch' && inputs.run_tests ||
+      github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'tests:') || contains(github.event.head_commit.message, 'run tests'))
+      }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
@@ -55,10 +58,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [ 22 ]
-        mongo: [ 7 ]
+        node: [22]
+        mongo: [7]
     name: Additional tests
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_additional_tests || github.event_name == 'push' && contains(github.event.head_commit.message, 'additional tests') }}
+    if: ${{
+      github.event_name == 'workflow_dispatch' && inputs.run_additional_tests ||
+      github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'additional tests') || contains(github.event.head_commit.message, 'additional tests'))
+      }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
@@ -78,7 +84,10 @@ jobs:
 
   build_e2e_tests:
     name: Build e2e tests
-    if: ${{ github.event_name == 'workflow_dispatch' && inputs.build_e2e_tests || github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip e2e tests') }}
+    if: ${{
+      github.event_name == 'workflow_dispatch' && inputs.build_e2e_tests ||
+      github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'e2e:') || contains(github.event.head_commit.message, 'build e2e'))
+      }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
@@ -99,16 +108,16 @@ jobs:
   build_app:
     name: Build app
     # if: ${{ github.event_name == 'workflow_dispatch' && inputs.build_app || github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip app') }}
-    if : ${{ 
-      github.event_name == 'workflow_dispatch' && inputs.build_app || 
+    if: ${{
+      github.event_name == 'workflow_dispatch' && inputs.build_app ||
       github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'app:') || contains(github.event.head_commit.message, 'build app'))
       }}
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
-        node: [ 20 ]
-        debian: [ 'bookworm' ]
+        node: [20]
+        debian: ["bookworm"]
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -127,10 +136,10 @@ jobs:
 
   build_docs:
     name: Build docs
-    if: ${{ 
-        github.event_name == 'workflow_dispatch' && inputs.build_docs || 
-        github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'docs:') || contains(github.event.head_commit.message, 'build doc'))
-        }}
+    if: ${{
+      github.event_name == 'workflow_dispatch' && inputs.build_docs ||
+      github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'docs:') || contains(github.event.head_commit.message, 'build doc'))
+      }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
