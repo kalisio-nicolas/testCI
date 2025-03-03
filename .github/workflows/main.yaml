@@ -1,6 +1,7 @@
 name: Build and Release
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       run_tests:
@@ -29,12 +30,10 @@ on:
         required: false
         type: boolean
 
-  
-
 jobs:
   run_tests:
     name: Run tests
-    if: ${{ !contains(github.event.head_commit.message, 'skip tests') }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_tests || github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip tests') }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
@@ -59,7 +58,7 @@ jobs:
         node: [ 22 ]
         mongo: [ 7 ]
     name: Additional tests
-    if: ${{ contains(github.event.head_commit.message, 'additional tests') }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.run_additional_tests || github.event_name == 'push' && contains(github.event.head_commit.message, 'additional tests') }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
@@ -79,7 +78,7 @@ jobs:
 
   build_e2e_tests:
     name: Build e2e tests
-    if: ${{ !contains(github.event.head_commit.message, 'skip e2e tests') }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.build_e2e_tests || github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip e2e tests') }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
@@ -99,7 +98,7 @@ jobs:
 
   build_app:
     name: Build app
-    if: ${{ !contains(github.event.head_commit.message, 'skip app') }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.build_app || github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip app') }}
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
@@ -124,7 +123,7 @@ jobs:
 
   build_docs:
     name: Build docs
-    if: ${{ startsWith(github.event.head_commit.message, 'docs:') || contains(github.event.head_commit.message, 'build doc') }}
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.build_docs || github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'docs:') || contains(github.event.head_commit.message, 'build doc')) }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
