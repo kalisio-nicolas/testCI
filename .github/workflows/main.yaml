@@ -33,8 +33,8 @@ jobs:
   run_tests:
     name: Run tests
     if: ${{
-      !contains(github.event.head_commit.message, 'skip tests') ||
-      inputs.run_tests
+      github.event_name == 'workflow_dispatch' && inputs.run_tests ||
+      github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip tests')
       }}
     runs-on: ubuntu-22.04
     steps:
@@ -61,8 +61,8 @@ jobs:
         mongo: [7]
     name: Additional tests
     if: ${{
-      contains(github.event.head_commit.message, 'additional tests') ||
-      inputs.run_additional_tests
+      github.event_name == 'workflow_dispatch' && inputs.run_additional_tests ||
+      github.event_name == 'push' && contains(github.event.head_commit.message, 'additional tests')
       }}
     runs-on: ubuntu-22.04
     steps:
@@ -84,8 +84,8 @@ jobs:
   build_e2e_tests:
     name: Build e2e tests
     if: ${{
-      !contains(github.event.head_commit.message, 'skip e2e tests') ||
-      inputs.build_e2e_tests
+      github.event_name == 'workflow_dispatch' && inputs.build_e2e_tests ||
+      github.event_name == 'push' && !contains(github.event.head_commit.message, 'skip e2e tests')
       }}
     runs-on: ubuntu-22.04
     steps:
@@ -107,8 +107,8 @@ jobs:
   build_app:
     name: Build app
     if: ${{
-      !contains(github.event.head_commit.message, 'skip app') ||
-      inputs.build_app
+      github.event_name == 'workflow_dispatch' && inputs.build_app ||
+      github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'app:') || contains(github.event.head_commit.message, 'build app'))
       }}
     runs-on: ubuntu-22.04
     strategy:
@@ -135,8 +135,8 @@ jobs:
   build_docs:
     name: Build docs
     if: ${{
-      (startsWith(github.event.head_commit.message, 'docs:') || contains(github.event.head_commit.message, 'build doc') ) ||
-      inputs.build_docs
+      github.event_name == 'workflow_dispatch' && inputs.build_docs ||
+      github.event_name == 'push' && (startsWith(github.event.head_commit.message, 'docs:') || contains(github.event.head_commit.message, 'build doc'))
       }}
     runs-on: ubuntu-22.04
     steps:
