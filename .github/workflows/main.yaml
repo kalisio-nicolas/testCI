@@ -60,7 +60,10 @@ jobs:
         node: [22]
         mongo: [7]
     name: Additional tests
-    if: ${{ contains(github.event.head_commit.message, 'additional tests') }}
+    if: ${{
+      contains(github.event.head_commit.message, 'additional tests') ||
+      github.event.inputs.run_additional_tests
+      }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
@@ -80,7 +83,10 @@ jobs:
 
   build_e2e_tests:
     name: Build e2e tests
-    if: ${{ !contains(github.event.head_commit.message, 'skip e2e tests') }}
+    if: ${{
+      !contains(github.event.head_commit.message, 'skip e2e tests') ||
+      github.event.inputs.build_e2e_tests
+      }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
@@ -100,7 +106,10 @@ jobs:
 
   build_app:
     name: Build app
-    if: ${{ !contains(github.event.head_commit.message, 'skip app') }}
+    if: ${{
+      !contains(github.event.head_commit.message, 'skip app') ||
+      github.event.inputs.build_app
+      }}
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
@@ -125,7 +134,10 @@ jobs:
 
   build_docs:
     name: Build docs
-    if: ${{ startsWith(github.event.head_commit.message, 'docs:') || contains(github.event.head_commit.message, 'build doc') }}
+    if: ${{
+      (startsWith(github.event.head_commit.message, 'docs:') || contains(github.event.head_commit.message, 'build doc') ) ||
+      github.event.inputs.build_docs
+      }}
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout repo
