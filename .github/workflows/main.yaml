@@ -34,7 +34,7 @@ jobs:
     name: Run tests
     if: ${{
       !contains(github.event.head_commit.message, 'skip tests') ||
-      github.event.inputs.run_tests
+      inputs.run_tests
       }}
     runs-on: ubuntu-22.04
     steps:
@@ -62,7 +62,7 @@ jobs:
     name: Additional tests
     if: ${{
       contains(github.event.head_commit.message, 'additional tests') ||
-      github.event.inputs.run_additional_tests
+      inputs.run_additional_tests
       }}
     runs-on: ubuntu-22.04
     steps:
@@ -85,7 +85,7 @@ jobs:
     name: Build e2e tests
     if: ${{
       !contains(github.event.head_commit.message, 'skip e2e tests') ||
-      github.event.inputs.build_e2e_tests
+      inputs.build_e2e_tests
       }}
     runs-on: ubuntu-22.04
     steps:
@@ -108,7 +108,7 @@ jobs:
     name: Build app
     if: ${{
       !contains(github.event.head_commit.message, 'skip app') ||
-      github.event.inputs.build_app
+      inputs.build_app
       }}
     runs-on: ubuntu-22.04
     strategy:
@@ -136,7 +136,7 @@ jobs:
     name: Build docs
     if: ${{
       (startsWith(github.event.head_commit.message, 'docs:') || contains(github.event.head_commit.message, 'build doc') ) ||
-      github.event.inputs.build_docs
+      inputs.build_docs
       }}
     runs-on: ubuntu-22.04
     steps:
