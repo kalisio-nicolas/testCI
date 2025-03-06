@@ -3,7 +3,7 @@
 
 
 >  [!CAUTION]  
->  **8** visual regression tests failed.
+>  **8** visual regression tests have failed.
 >  
 > - administrateur/groupes-view 
 > - administrateur/logout-screen 
