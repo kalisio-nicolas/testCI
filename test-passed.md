@@ -3,7 +3,7 @@
 
 
 >  [!TIP]   
->  All visual regression tests passed successfully.  
+>  All visual regression tests have passed. 
 
 
 
