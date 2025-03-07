@@ -2,7 +2,7 @@
 
 >   [!CAUTION]
 >   **8** tests have failed
->   - [administrateur/groupes-view](#administrateur/groupes-view)
+>   - [administrateur/groupes-view](#administrateurgroupes-view)
 >   - administrateur/logout-screen
 >   - administrateur/new-record
 >   - boss/groupes-view
