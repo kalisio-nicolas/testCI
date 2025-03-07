@@ -1,8 +1,28 @@
 # [TAXORAD] (07-03-2025)
 
->   [!TIP]
-> All tests have passed
+>   [!CAUTION]
+>   **2** tests have failed
+>   - [operateur/logout-screen](#operateurlogout-screen)
+>   - [operateur/producteurs-view](#operateurproducteurs-view)
 
+<details>
+<summary><h2>🔍 Inspect</h2></summary>
+
+### operateur/logout-screen
+
+<p align="center">
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/operateur/logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T142704Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=3cb6a466c5fcc879073a4d970433567e26cb1fe46433bd2ccfa3f093a239adee" width="49%"/>
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/operateur/diff.logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T142704Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=a1d160d346a3f6b34f72ddabccc61826c7a8b5901c7ac583786b7ff41a643f62" width="49%"/>
+</p>
+
+### operateur/producteurs-view
+
+<p align="center">
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/operateur/producteurs-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T142706Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=966eb939c3fcd415f53a8f258754103d946165761125b09fa718a885e580dd97" width="49%"/>
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/operateur/diff.producteurs-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T142705Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f971fb0cd422c4453e6a132c974324bd1f5be0669bb6e87c01a5874345851e95" width="49%"/>
+</p>
+
+</details>
 
 <details>
 <summary><h2>📜 Logs</h2></summary>
@@ -46,8 +66,28 @@ Runner created with the following options:
   appName: 'taxorad',
   lang: 'fr-FR'
 }
-Creating runner directory structure
-    1) "before all" hook for "login"
+    ✔ login (10208ms)
+    ✔ list tables (1371ms)
+> List records for table Groupes
+> List records for table Laboratoires
+> List records for table Préleveurs
+> List records for table Producteurs
+> List records for table Appareils de mesure
+> List records for table Equipements de prélèvement
+> List records for table Méthodes
+> List records for table Compartiments
+> List records for table Espèces
+> List records for table Natures
+> List records for table Radionucléides
+> List records for table Unités
+    ✔ list records per tables (78248ms)
+    ✔ create compartiment record (7165ms)
+    ✔ edit compartiment record (4635ms)
+    ✔ remove compartiment record (5816ms)
+    ✔ check create version (1403ms)
+    ✔ check left pane (763ms)
+    ✔ check about box (1479ms)
+    ✔ logout (3644ms)
 
   boss
 Runner created with the following options:
@@ -75,8 +115,28 @@ Runner created with the following options:
   appName: 'taxorad',
   lang: 'fr-FR'
 }
-Creating runner directory structure
-    2) "before all" hook for "login"
+    ✔ login (10048ms)
+    ✔ list tables (1328ms)
+> List records for table Groupes
+> List records for table Laboratoires
+> List records for table Préleveurs
+> List records for table Producteurs
+> List records for table Appareils de mesure
+> List records for table Equipements de prélèvement
+> List records for table Méthodes
+> List records for table Compartiments
+> List records for table Espèces
+> List records for table Natures
+> List records for table Radionucléides
+> List records for table Unités
+    ✔ list records pet tables (54044ms)
+    ✔ create compartiment record (7029ms)
+    ✔ edit compartiment record (4583ms)
+    ✔ remove compartiment record (5738ms)
+    ✔ check create version (1418ms)
+    ✔ check left pane (764ms)
+    ✔ check about box (1469ms)
+    ✔ logout (3375ms)
 
   operateur
 Runner created with the following options:
@@ -104,51 +164,46 @@ Runner created with the following options:
   appName: 'taxorad',
   lang: 'fr-FR'
 }
-Creating runner directory structure
-    3) "before all" hook for "login"
+    ✔ login (10263ms)
+    ✔ check tables activity (1322ms)
+> List records for table Groupes
+> List records for table Laboratoires
+> List records for table Préleveurs
+> List records for table Producteurs
+    1) check records activity
+    ✔ check left pane (770ms)
+    ✔ check about box (1451ms)
+    2) logout
 
 
-  0 passing (188ms)
-  3 failing
+  24 passing (4m)
+  2 failing
 
-  1) administrateur
-       "before all" hook for "login":
-     Error: Failed to launch the browser process! undefined
-[436379:436379:0307/152148.626696:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
-[436379:436379:0307/152148.626732:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.
+  1) operateur
+       check records activity:
 
+      AssertionError: expected false to be true
+      + expected - actual
 
-TROUBLESHOOTING: https://pptr.dev/troubleshooting
+      -false
+      +true
+      
+      at Proxy.<anonymous> (node_modules/chai-lint/index.js:35:42)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at Context.<anonymous> (file:///home/noenic/alternance/irsn/taxorad-workspace/taxorad/test/operateur.test.mjs:68:21)
 
-      at ChildProcess.onClose (file:///home/noenic/alternance/irsn/taxorad-workspace/kdk/node_modules/@puppeteer/browsers/lib/esm/launch.js:250:24)
-      at ChildProcess.emit (node:events:530:35)
-      at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+  2) operateur
+       logout:
 
-  2) boss
-       "before all" hook for "login":
-     Error: Failed to launch the browser process! undefined
-[436404:436404:0307/152148.688976:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
-[436404:436404:0307/152148.689042:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.
+      AssertionError: expected false to be true
+      + expected - actual
 
-
-TROUBLESHOOTING: https://pptr.dev/troubleshooting
-
-      at ChildProcess.onClose (file:///home/noenic/alternance/irsn/taxorad-workspace/kdk/node_modules/@puppeteer/browsers/lib/esm/launch.js:250:24)
-      at ChildProcess.emit (node:events:530:35)
-      at ChildProcess._handle.onexit (node:internal/child_process:293:12)
-
-  3) operateur
-       "before all" hook for "login":
-     Error: Failed to launch the browser process! undefined
-[436430:436430:0307/152148.744121:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
-[436430:436430:0307/152148.744159:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.
-
-
-TROUBLESHOOTING: https://pptr.dev/troubleshooting
-
-      at ChildProcess.onClose (file:///home/noenic/alternance/irsn/taxorad-workspace/kdk/node_modules/@puppeteer/browsers/lib/esm/launch.js:250:24)
-      at ChildProcess.emit (node:events:530:35)
-      at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+      -false
+      +true
+      
+      at Proxy.<anonymous> (node_modules/chai-lint/index.js:35:42)
+      at Proxy.methodWrapper (node_modules/chai/lib/chai/utils/addMethod.js:57:25)
+      at Context.<anonymous> (file:///home/noenic/alternance/irsn/taxorad-workspace/taxorad/test/operateur.test.mjs:88:62)
 
 
 
@@ -157,7 +212,7 @@ File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 ----------|---------|----------|---------|---------|-------------------
 All files |       0 |        0 |       0 |       0 |                   
 ----------|---------|----------|---------|---------|-------------------
-error Command failed with exit code 3.
+error Command failed with exit code 2.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
