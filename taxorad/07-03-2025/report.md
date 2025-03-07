@@ -108,14 +108,14 @@ Creating runner directory structure
     3) "before all" hook for "login"
 
 
-  0 passing (201ms)
+  0 passing (188ms)
   3 failing
 
   1) administrateur
        "before all" hook for "login":
      Error: Failed to launch the browser process! undefined
-[435809:435809:0307/152110.228302:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
-[435809:435809:0307/152110.228345:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.
+[436379:436379:0307/152148.626696:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
+[436379:436379:0307/152148.626732:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.
 
 
 TROUBLESHOOTING: https://pptr.dev/troubleshooting
@@ -127,8 +127,8 @@ TROUBLESHOOTING: https://pptr.dev/troubleshooting
   2) boss
        "before all" hook for "login":
      Error: Failed to launch the browser process! undefined
-[435834:435834:0307/152110.290704:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
-[435834:435834:0307/152110.290739:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.
+[436404:436404:0307/152148.688976:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
+[436404:436404:0307/152148.689042:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.
 
 
 TROUBLESHOOTING: https://pptr.dev/troubleshooting
@@ -140,8 +140,8 @@ TROUBLESHOOTING: https://pptr.dev/troubleshooting
   3) operateur
        "before all" hook for "login":
      Error: Failed to launch the browser process! undefined
-[435859:435859:0307/152110.346307:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
-[435859:435859:0307/152110.346342:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.
+[436430:436430:0307/152148.744121:ERROR:ozone_platform_x11.cc(239)] Missing X server or $DISPLAY
+[436430:436430:0307/152148.744159:ERROR:env.cc(255)] The platform failed to initialize.  Exiting.
 
 
 TROUBLESHOOTING: https://pptr.dev/troubleshooting
