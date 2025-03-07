@@ -1,100 +1,82 @@
+# [TAXORAD] (07-03-2025)
 
-# [TAXORAD] END-TO-END TESTS
-
-
->  [!CAUTION]  
->  **8** visual regression tests have failed.
->  
-> - administrateur/groupes-view 
-> - administrateur/logout-screen 
-> - administrateur/new-record 
-> - boss/groupes-view 
-> - boss/logout-screen 
-> - boss/new-record 
-> - operateur/logout-screen 
-> - operateur/producteurs-view 
-
-
-
+>   [!CAUTION]
+>   **8** tests have failed
+>   - administrateur/groupes-view
+>   - administrateur/logout-screen
+>   - administrateur/new-record
+>   - boss/groupes-view
+>   - boss/logout-screen
+>   - boss/new-record
+>   - operateur/logout-screen
+>   - operateur/producteurs-view
 
 <details>
-  <summary><h2>🔍 Inspect</h2></summary>
+<summary><h2>🔍 Inspect</h2></summary>
 
-  
-  ### administrateur/groupes-view 
+### administrateur/groupes-view
 
-  <p align="center">
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/administrateur/groupes-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143518Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=bc33b9a1b31ccce62111bd0376f7b76fef952bff4dcab7edced2f1a364184192" alt="Image Actuelle" />
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/administrateur/diff.groupes-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143518Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=aa656c8aaf1af22823a485f21b80338a03a124a68ff6d2c3fefc9c42e164b2c8" alt="Image de Différence" />
-  </p>
-  
+<p align="center">
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/administrateur/groupes-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110312Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=71192ceaa99064cc6b78fa83592fe2680915a25e502303207a2a451d11f2fdfa" width="49%"/>
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/administrateur/diff.groupes-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110312Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=3df43a545071c59411876ea6d7c24285dd78834ef86dcd4f7d69a69c43c261ef" width="49%"/>
+</p>
 
-  ### administrateur/logout-screen 
+### administrateur/logout-screen
 
-  <p align="center">
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/administrateur/logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143618Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=bb257d54ee0265abcb99baef5f30ae2d7343cc8b0a1d4006bf83b0e8d5e68514" alt="Image Actuelle" />
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/administrateur/diff.logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143519Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=a65a6266189bb3d8a9266b4a08f13c2e14db51e981f1612c9f279911234bb69e" alt="Image de Différence" />
-  </p>
-  
+<p align="center">
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/administrateur/logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110313Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=04a6cac9bc6937838d16aa14448c92d6d9e03bd26fb14f8cc1d170370b18d49b" width="49%"/>
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/administrateur/diff.logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110313Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=fea173729c4855b00128c2c5146733b12cb70998a418c93ab19d0ffeed6f6b00" width="49%"/>
+</p>
 
-  ### administrateur/new-record 
+### administrateur/new-record
 
-  <p align="center">
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/administrateur/new-record.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143619Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=6e2e1d1d38ef22ab756ea2315f1adcae3937b00b7a8d590f69aa047c26fb16f9" alt="Image Actuelle" />
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/administrateur/diff.new-record.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143619Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=59f366bc4799553d7eaf9366ccadcced225be7dbb09322c38daa99bdc64fac97" alt="Image de Différence" />
-  </p>
-  
+<p align="center">
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/administrateur/new-record.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110314Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=c56d808c6fe5d81c6cf426f3bb17f0e1a8c39884fe21c5566d267ceb88097508" width="49%"/>
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/administrateur/diff.new-record.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110314Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=20086f2d799465ee05c1fa08605b74ec01cc12c5fd4b36e471662014a6f103fc" width="49%"/>
+</p>
 
-  ### boss/groupes-view 
+### boss/groupes-view
 
-  <p align="center">
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/boss/groupes-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143620Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=3350f3c10d2b7fcfab5de48478c7b008572751759d76d09a001f50abadafedcc" alt="Image Actuelle" />
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/boss/diff.groupes-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143620Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=e65534b7429a5719893c067f159975e5fb3853052bbcfbbbfd91d1bfceb1dcf6" alt="Image de Différence" />
-  </p>
-  
+<p align="center">
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/boss/groupes-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110315Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=a1e25e5ce566338ffb775d66dbacb47acfc5ac4ff9206b4e2c02c4a576708f0a" width="49%"/>
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/boss/diff.groupes-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110314Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=2d1bfcf59ba4d0952b6bb5b88728ca6059f41341314608f4e596f4a8b70a281b" width="49%"/>
+</p>
 
-  ### boss/logout-screen 
+### boss/logout-screen
 
-  <p align="center">
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/boss/logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143622Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=1d2fac816659f42ac8d22472f3bdbf58c410ecc4fd3ecc7c3207d3b2e17ba149" alt="Image Actuelle" />
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/boss/diff.logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143621Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=c38d47bc5eb9fcb7a068d143f7a492ca6246ddd73e060b96672e03413299cb13" alt="Image de Différence" />
-  </p>
-  
+<p align="center">
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/boss/logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110315Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=ce109541618e0bfde8a1237dda6a6293ab96f3515602da477602c10036e9536a" width="49%"/>
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/boss/diff.logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110315Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=c9a897c2f5dda381fa9b87ad1b237af39502579fc5011895405fe5c771781438" width="49%"/>
+</p>
 
-  ### boss/new-record 
+### boss/new-record
 
-  <p align="center">
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/boss/new-record.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143623Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=498943a3712355212f1e2e6fc7eacd962a768c8b9798ebb8aa18b2c8f7f3b743" alt="Image Actuelle" />
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/boss/diff.new-record.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143622Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=714329a511eb6ef76e1a5f0bd1e33cb1b445270851f1a9f957389caa9831ded0" alt="Image de Différence" />
-  </p>
-  
+<p align="center">
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/boss/new-record.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110316Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=6ea226b3e4580800c41e4663b2ff1ea1fc8c28e19842c263394a993ee08d68fc" width="49%"/>
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/boss/diff.new-record.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110316Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f0f8106fdb8e5f3faf42f8d54363739314e5b19702139ec280c55a8b8edb7210" width="49%"/>
+</p>
 
-  ### operateur/logout-screen 
+### operateur/logout-screen
 
-  <p align="center">
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/operateur/logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143624Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=4bc0e8a2cad826dc49d0f092950c4da227b39645205663cf6c3078480c72ee0c" alt="Image Actuelle" />
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/operateur/diff.logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143623Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=21f0443516b6a70671cf61b5fc8091ebf52104ffa9eda98a4b703f387aa9e281" alt="Image de Différence" />
-  </p>
-  
+<p align="center">
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/operateur/logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110317Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=3eacd21dd2343c7f55641fd426cab4aeb7051994f2bae9a09fa7bfc25793230d" width="49%"/>
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/operateur/diff.logout-screen.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110317Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=a05b511b4629f9ca93761d57d478da49f6157657c310004f26a58eae5c42ea9d" width="49%"/>
+</p>
 
-  ### operateur/producteurs-view 
+### operateur/producteurs-view
 
-  <p align="center">
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/operateur/producteurs-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143625Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=78be1235a64a03b773f69778d2add2b8601397e177577ab098858608c3307aed" alt="Image Actuelle" />
-    <img width="49%" src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/06-03-2025/operateur/diff.producteurs-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250306%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250306T143625Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=5ca92292eb6f2f4b5f90c403eef1517390d96381f640c89b3ae0547b90f407d4" alt="Image de Différence" />
-  </p>
-  
-  
+<p align="center">
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/operateur/producteurs-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110318Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=fb322c662ad218137c4c4b648b994f7264edd14f6b92c3ded510608ee666d28a" width="49%"/>
+  <img src="https://s3.gra.cloud.ovh.net/dev/e2e-tests/taxorad/07-03-2025/operateur/diff.producteurs-view.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=3f1c4c5f9fbc4edb92cc05cbedce9a20%2F20250307%2FGRA%2Fs3%2Faws4_request&X-Amz-Date=20250307T110317Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=33c8f3b9583da701eaac11b8e279a3cfb86ff6c7227ca89ca50c4b626387ede8" width="49%"/>
+</p>
+
 </details>
 
-
-
-
 <details>
-  <summary><h2>📜 Logs</h2></summary>
+<summary><h2>📜 Logs</h2></summary>
 
-  ```bash
-  yarn run v1.22.22
+```shell
+yarn run v1.22.22
 $ cd test && npm run coverage
 
 > taxorad@1.3.0 coverage
@@ -339,7 +321,6 @@ All files |       0 |        0 |       0 |       0 |
 ----------|---------|----------|---------|---------|-------------------
 error Command failed with exit code 8.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-
-  ```
+```
 
 </details>
